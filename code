@@ -1,0 +1,29 @@
+class Garage:
+    def __init__(self, address, capacity):
+        self.address = address
+        self.capacity = capacity
+
+    def vehicle_entry(self):
+        self.capacity += 1
+
+    def vehicle_exit(self):
+        self.capacity -= 1
+
+    def vehicle_list(self):
+        print("Amount of cars in the Garage:",+ self.capacity)
+
+class Car:
+    def __init__(self, model, plate_number):
+        self.model = model
+        self.plate_number = plate_number
+    
+    def car_info(self):
+        print("Car info in Garage:"+ self.model + " " + self.plate_number)
+    
+        
+
+garage = Garage("Downtown", 0)
+car1 = Car("Volvo", "123AA")
+garage.vehicle_entry()
+garage.vehicle_list()
+car1.car_info()
